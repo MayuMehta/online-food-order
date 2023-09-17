@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+ 	<style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    input[type=text],[type=password]
+    {
+      width: 340px;
+      /* height: 40px; */
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+    }
+    input[type=button]:hover{
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body background="photo\fast1.jpg">
+  <center>
+    <div>
+      <div>
+      	<br><br><br>
+        <h1 style="color: yellow">Login</h1>
+        <br>
+      </div>
+      <div >
+      	<br><br>
+        <input type="text" name="user" placeholder="   Username" id="user"><br><br>
+        <br><br>
+        <input type="password" name="password" id="password" placeholder="   Password" /><br><br><br><br>
+         <h2 style="background-color: white; width: 250px">New user <a href="register.html">Click Here</a> </h2>
+        <br><br><br>
+        <input type="button" name="" value="Login" style="color: white; padding: 15px;font-weight: 600;border-radius: 10px;border: none; background-color: green;" onclick="logi()">
+        <a href="online.html"><input type="button" name="" value="Cancel" style="color: white;font-weight: 600; padding: 15px;border-radius: 10px;border: none; background-color: red;"></a>
+      </div>
+    </div>
+    </center>
+    <script type="text/javascript">
+    	function logi(argument)
+    	{
+    		var uname=["Pranav","Mayush","Anjali","Shalini"];
+    		var pass=["pranav","mayush","anjali","shalini"];
+    		var fl=0;
+    		for (var i = 0; i < 4; i++) 
+    		{
+    			if(document.getElementById('user').value==uname[i] && document.getElementById('password').value==pass[i])
+    			{
+    				fl=1;
+    			}
+    		}
+    		if(fl==1)
+    			{
+    				alert("Login Successfully");
+    			}
+	    		else
+	    		{
+	    			alert("Inavlid Username or Password");
+	    		}
+    	}
+    </script>
+</body>
+
+</html>
